@@ -75,8 +75,6 @@ function canvasApp() {
     
     createCells();
     
-    displayCanvas.addEventListener("click", restart, false);
-    
     timer = window.setInterval(onTimer, 1000/30);
   }
   
