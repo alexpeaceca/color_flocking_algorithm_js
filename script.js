@@ -214,19 +214,7 @@ function canvasApp() {
       cell.bufferRVel += ease*(rSep + rVelAve + rAve - cell.r - cell.bufferRVel);
       cell.bufferGVel += ease*(gSep + gVelAve + gAve - cell.g - cell.bufferGVel);
       cell.bufferBVel += ease*(bSep + bVelAve + bAve - cell.b - cell.bufferBVel);
-      
-      
-      //Code for clamping velocity commented out because in my testing, the velocity never went over the max. (But you may wish to restore this
-      //code if you experiment with different parameters.)
-      /*
-      if ((mag = Math.sqrt(cell.bufferRVel*cell.bufferRVel + cell.bufferGVel*cell.bufferGVel + cell.bufferBVel*cell.bufferBVel))> velMax) {
-        cell.bufferRVel *= (f = velMax/mag);
-        cell.bufferGVel *= f;
-        cell.bufferBVel *= f;
-        Debugger.log("clamped");
-      }
-      */
-      
+
       //update colors according to color velocities
       cell.bufferR += cell.bufferRVel;
       cell.bufferG += cell.bufferGVel;
